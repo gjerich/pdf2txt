@@ -288,22 +288,7 @@ function pdf2text($filename) {
 }
 
 
-$pdffile='pdf.pdf';
-
-$pdfinfo = exec("pdfinfo $pdffile|awk ' /'Author:'/ {print $2,$3}'");
-//Get document author
-echo 'DOCUMENT METADATA<br>Author: '.$pdfinfo;
-$pdfinfo = exec("pdfinfo $pdffile|awk ' /'Pages:'/ {print $2}'");
-//Pages
-echo '<br>Number of pages: '.$pdfinfo;
-$pdfinfo = exec("pdfinfo $pdffile|awk ' /'CreationDate:'/ {print $2,$3,$4,$5,$6}'");
-//CreationDate
-echo '<br>Creation Date: '.$pdfinfo;
-$pdfinfo = exec("pdfinfo $pdffile|awk ' /'File'/ {print $3/1024}'");
-//File size
-echo '<br>File size: '.round($pdfinfo, 1) .' KiB';
-/****************************** PDF 2 TEXT ********************************************/
-
+$pdffile = 'test.pdf';
 
 $get_txt = pdf2text($pdffile);
 echo '<hr>DOCUMENT VALUES<br>Name: '.$get_txt['Name'];
