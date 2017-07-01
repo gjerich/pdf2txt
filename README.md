@@ -1,1 +1,1 @@
-# pdf2txt
+# pdf2text from mpdf PDF file
