@@ -1,7 +1,5 @@
 <?php
 
-echo '<head><title>REDER</title></head>';
-
 function decodeAsciiHex($input) {
     $output = "";
 
