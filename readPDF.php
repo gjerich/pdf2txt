@@ -287,9 +287,8 @@ function pdf2text($filename) {
     return array_filter(array_combine($f, $v));
 }
 
-
 $pdffile = 'test.pdf';
 
 $get_txt = pdf2text($pdffile);
-echo '<hr>DOCUMENT VALUES<br>Name: '.$get_txt['Name'];
 
+echo $get_txt['Name'];
